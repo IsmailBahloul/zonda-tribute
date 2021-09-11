@@ -1,0 +1,202 @@
+/* remove browser style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  /* overflow: hidden; */
+}
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap");
+/* setup variables */
+:root {
+  /* black*/
+  --primary500: #0e171e;
+  /* grey */
+  --primary200: #3e454b;
+  /* blacker */
+  --primary700: #080e12;
+  /* white */
+  --secondary500: #d3d2d0;
+  --secondary200: #e5e4e3;
+  /* light grey */
+  --secondary700: #7f7e7d;
+  /* red */
+  --tertiary500: #a00004;
+  --tertiary200: #b33336;
+  --tertiary700: #600002;
+  /* nav background */
+  --navColor: #0b1218;
+}
+/* set font */
+body {
+  font-family: "Kaisei Tokumin", serif;
+}
+/* navbar */
+.logo {
+  width: 250px;
+  position: relative;
+  top: -45px;
+  left: 0;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  background: var(--tertiary500);
+}
+nav ul {
+  float: right;
+  margin: 0 20px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+  line-height: 80px;
+}
+nav ul li a {
+  color: var(--primary500);
+  font-size: 25px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+/* global link hover color */
+a:hover {
+  color: var(--primary200);
+}
+li a:hover {
+  background: var(--tertiary200);
+}
+.checkbtn {
+  font-size: 30px;
+  color: var(--primary500);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+/* hero text/image */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/c12.jpg") center / cover no-repeat;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+.hero h1 {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 80px;
+  color: var(--secondary200);
+  line-height: 550px;
+  /* position: relative;
+  left: 1vw; */
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+/* columns */
+.clm {
+  display: inline-block;
+  width: 33.33%;
+  height: 50vh;
+  text-align: center;
+}
+.clm i {
+  font-size: 50px;
+  color: var(--primary700);
+}
+.clm p {
+  padding: 0 3px 3px 3px;
+}
+#clm1 i {
+  color: var(--secondary500);
+}
+#clm1 {
+  background: var(--primary500);
+  border: var(--primary200) solid 3px;
+  color: var(--secondary500);
+}
+#clm2 {
+  background: var(--secondary500);
+  float: left;
+  border: var(--secondary700) solid 3px;
+}
+#clm3 {
+  background: var(--tertiary500);
+  float: right;
+  border: var(--tertiary200) solid 3px;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 8vh;
+  background: var(--secondary200);
+  color: var(--primary500);
+}
+footer h5 {
+  float: left;
+  line-height: 50px;
+}
+footer h6 {
+  float: right;
+  line-height: 50px;
+}
+/* Main above */
+/* Responsive below */
+@media (max-width: 1176px) {
+  .hero h1 {
+    font-size: 6vw;
+  }
+}
+@media (max-width: 952px) {
+  .logo {
+    width: 225px;
+    position: absolute;
+    top: -34px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 658px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--navColor);
+    top: 80px;
+    left: -105%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: var(--secondary500);
+    border-bottom: var(--tertiary500) solid 3px;
+  }
+  li a:hover {
+    background: var(--tertiary500);
+    color: var(--primary700);
+  }
+  #check:checked ~ ul {
+    left: -20px;
+  }
+  .hero h1 {
+    font-size: 6vw;
+  }
+}
