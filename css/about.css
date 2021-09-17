@@ -80,58 +80,7 @@ li a:hover {
 #check {
   display: none;
 }
-/* hero text/image */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../assets/c12.jpg") center / cover no-repeat;
-  width: 100%;
-  height: calc(100vh - 80px);
-}
-.hero h1 {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 80px;
-  color: var(--secondary200);
-  line-height: 550px;
-  /* position: relative;
-  left: 1vw; */
-  margin: 0 auto;
-  transition: all 0.5s;
-}
-/* columns */
-.clm {
-  display: inline-block;
-  width: 33.33%;
-  height: 50vh;
-  text-align: center;
-}
-.clm i {
-  font-size: 50px;
-  color: var(--primary700);
-}
-.clm p {
-  padding: 0 3px 3px 3px;
-}
-#clm1 i {
-  color: var(--secondary500);
-}
-#clm1 {
-  background: var(--primary500);
-  border: var(--primary200) solid 3px;
-  color: var(--secondary500);
-}
-#clm2 {
-  background: var(--secondary500);
-  float: left;
-  border: var(--secondary700) solid 3px;
-}
-#clm3 {
-  background: var(--tertiary500);
-  float: right;
-  border: var(--tertiary200) solid 3px;
-}
+/* new code here */
 /* footer */
 footer {
   width: 100%;
