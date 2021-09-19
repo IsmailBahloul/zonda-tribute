@@ -6,6 +6,7 @@
   text-decoration: none;
   list-style: none;
   /* overflow: hidden; */
+  color: var(--primary700);
 }
 /* google font */
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap");
@@ -70,7 +71,7 @@ li a:hover {
 }
 .checkbtn {
   font-size: 30px;
-  color: var(--primary700);
+  color: var(--primary500);
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -80,113 +81,91 @@ li a:hover {
 #check {
   display: none;
 }
-/* hero text/image */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../assets/tricolore.jpg") center / cover no-repeat;
-  width: 100%;
-  height: calc(100vh - 80px);
-  position: relative;
+.background {
+  background: var(--secondary200);
+  height: 100%;
+  padding-top: 50px;
 }
-.hero h1 {
-  width: 100vw;
-  display: inline-block;
-  text-align: right;
-  font-weight: bolder;
-  font-size: 20px;
-  color: var(--secondary200);
-  line-height: 550px;
-  /* position: relative;
-  left: 1vw; */
-  margin: 0 auto 0 -20px;
-  position: absolute;
-  animation: fade-up 3s 1 0.1s;
+/* main head */
+#main-head {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 80px auto -10px auto;
 }
-/* horacio img */
-.hero-img-container {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: fade-right 3s 1;
+
+.main-underline {
+  margin: 50px auto;
+  width: 20%;
+  height: 5px;
+  border-radius: 10px;
+  background: var(--tertiary700);
 }
-.hero img {
-  display: inline-block;
-  width: 25vw;
-  margin: 150px 50px;
-  border: var(--tertiary500) solid 3px;
-  border-radius: 50%;
-  /* z-index: 1; */
+/* form */
+.form-container {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--secondary500);
 }
-/* fade in animations */
-@keyframes fade-up {
-  1% {
-    top: 100%;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.7;
-  }
-  100% {
-    top: 0;
-  }
+.form-wrapper {
+  margin-bottom: 3em;
+  border: var(--primary200) 3px solid;
+  border-radius: 5px;
 }
-@keyframes fade-right {
-  1% {
-    left: 100%;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.7;
-  }
-  100% {
-    left: 0;
-  }
+.form-row {
+  margin: 1em auto;
 }
-/* three horizontal columns */
-.section {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    rgba(14, 23, 30, 1),
-    rgba(14, 23, 30, 0.9),
-    rgba(160, 0, 4, 0.8),
-    rgba(211, 210, 208, 0.2)
-  );
-  border: var(--primary500) solid 4px;
-  border-radius: 0 0 10px 10px;
+.form-label {
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+  font-size: 0.9em;
+  color: var(--primary700);
 }
-.column {
-  height: 33.33%;
+.form-input {
+  display: block;
+  margin: 1em auto;
+  border: var(--tertiary500) 2px solid;
+  border-radius: 5px;
 }
-#column1 {
-  border: var(--primary500) solid 4px;
-  border-radius: 0 0 10px 10px;
-  color: var(--secondary500);
+.form-textarea {
+  display: block;
+  margin: 1em auto;
+  border: var(--tertiary500) 2px solid;
+  border-radius: 5px;
+  width: 95%;
+  height: 50%;
 }
-#column2 {
-  border: var(--primary500) solid 4px;
-  border-radius: 0 0 10px 10px;
-  position: relative;
-  top: -5px;
-  color: var(--secondary500);
-  margin-bottom: 0;
+.submit-btn {
+  display: block;
+  margin: 2em auto;
+  background: var(--secondary200);
+  border: var(--tertiary500) 2px solid;
+  width: 7em;
+  height: 5em;
+  border-radius: 5px;
 }
-#column2 p {
-  margin-top: 5px;
+.form-container:hover {
+  background: rgba(0, 0, 0, 0, 0.1);
 }
-#column3 {
-  color: var(--secondary500);
+.form-input:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.form-textarea:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.submit-btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.underline {
+  margin: 5px auto;
+  width: 25%;
+  height: 5px;
+  border-radius: 10px;
+  background: var(--tertiary700);
 }
 /* footer */
 footer {
@@ -207,14 +186,7 @@ footer h6 {
   padding-right: 5px;
 }
 /* Main above */
-/* this needs some more work, it works just not well */
 /* Responsive below */
-@media (max-width: 1176px) {
-  .hero h1 {
-    font-size: 1.5vw;
-    margin: 0 auto;
-  }
-}
 @media (max-width: 952px) {
   .logo {
     width: 225px;
@@ -224,18 +196,7 @@ footer h6 {
   nav ul li a {
     font-size: 20px;
   }
-  .hero {
-    overflow: hidden;
-  }
-  .hero h1 {
-    font-size: 1.5vw;
-    margin: 0 auto 0 50px;
-  }
-  .hero h1 span {
-    position: relative;
-    top: 30px;
-    left: -100px;
-  }
+
   footer {
     font-size: 3vw;
   }
@@ -245,11 +206,10 @@ footer h6 {
   .checkbtn {
     display: block;
   }
-
-  nav {
+  /* nav {
     position: fixed;
-    z-index: 2;
-  }
+    z-index: 1;
+  } */
   ul {
     position: fixed;
     width: 100%;
@@ -259,7 +219,7 @@ footer h6 {
     left: -105%;
     text-align: center;
     transition: all 0.5s;
-    z-index: 2;
+    z-index: 1;
   }
   nav ul li {
     display: block;
@@ -277,28 +237,5 @@ footer h6 {
   }
   #check:checked ~ ul {
     left: -20px;
-  }
-  .hero {
-    height: 100vh;
-    overflow: hidden;
-  }
-  .hero h1 {
-    font-size: 1.8vw;
-    margin: 0 0 0 50px;
-    position: ;
-  }
-  .hero h1 span {
-    position: relative;
-    top: 30px;
-    left: -100px;
-  }
-  #column1 {
-    height: 30vh;
-  }
-  #column2 {
-    height: 30vh;
-  }
-  #column3 {
-    height: 30vh;
   }
 }
