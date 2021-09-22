@@ -97,6 +97,7 @@ li a:hover {
   text-align: center;
   position: relative;
   top: 40vh;
+  width: 100%;
 
   animation: fade-down 3s 1 0.3s;
 }
@@ -106,8 +107,8 @@ li a:hover {
   margin: 0 auto;
   font-size: 10vw;
   text-align: center;
-  position: relative;
-  top: 50px;
+  /* position: relative;
+  top: 50px; */
 }
 .section {
   text-align: center;
@@ -174,6 +175,7 @@ footer h6 {
 /* Main above */
 /* this needs some more work, it works just not well */
 /* Responsive below */
+
 @media (max-width: 1176px) {
   .hero h1 {
     font-size: 4vw;
